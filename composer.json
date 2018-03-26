@@ -1,0 +1,14 @@
+{
+    "name": "vendor/micro-service-totem",
+    "description": "Descrição do projeto micro_service_totem.",
+    "authors": [
+        {
+            "name": "Morettic LTDA",
+            "email": "projetos@morettic.com.br"
+        }
+    ],
+    "require": {
+        "benhawker/pipedrive": "dev-master",
+        "phpmailer/phpmailer": "dev-master"
+    }
+}
