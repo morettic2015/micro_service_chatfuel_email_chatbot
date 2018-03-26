@@ -1,21 +1,20 @@
 <pre>
     <?php
     /*
-     * To change this license header, choose License Headers in Project Properties.
-     * To change this template file, choose Tools | Templates
-     * and open the template in the editor.
+     * @Function to send Email
+     * www.experienciasdigitais.com.br
      */
     require_once 'vendor/autoload.php';
 
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
 
-    function mailTotem($to,$name,$subject,$body) {
+    function mailTotem($to, $name, $subject, $body) {
 
         $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
         try {
             //Server settings
-           // $mail->SMTPDebug = 4;                                 // Enable verbose debug output
+            // $mail->SMTPDebug = 4;                                 // Enable verbose debug output
             $mail->isSMTP();                                      // Set mailer to use SMTP
             $mail->Host = 'smtp-vip-farm74.uni5.net';  // Specify main and backup SMTP servers
             $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -40,12 +39,12 @@
             $mail->AltBody = 'Visite: www.totemdefotos.com.br';
 
             $mail->send();
-           // echo 'Message has been sent';
+            // echo 'Message has been sent';
         } catch (Exception $e) {
             echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
             var_dump($e);
             die();
         }
     }
-    
-   // mailTotem("malacma@gmail.com","Luis","teste","teste");
+
+    // mailTotem("malacma@gmail.com","Luis","teste","teste");
