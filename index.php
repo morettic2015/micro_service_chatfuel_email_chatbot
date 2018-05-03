@@ -7,6 +7,19 @@ require_once 'template_default.php';
 require_once 'test_mail.php';
 
 use Benhawker\Pipedrive\Pipedrive;
+/*
+$contentEmailText = json_encode($_POST);
+$contentEmailText.="trash";
+$contentEmailText.=json_encode($_GET);
+$contentEmailText.="trash";
+$contentEmailText.=json_encode($_REQUEST);
+mailTotem("malacma@gmail.com", "Luis", "JSON POST", $contentEmailText);*/
+
+/**
+curl -d "first_name=Loius&email_lead=malacma@gmail.com&whats_lead=5548996004929&info_event=tese&first_name=moretto&last_name=Morettovixz&address=majorcosta&zip=88020100&city=floripa&state=sc&country=br&invited_event=1000&type_event=3&duration_event=3&date_event=11-11-2018" -X POST https://www.totemdefotos.com.br/wp-content/micro_service_totem/index.php
+curl -d "first_name=Loius&email_lead=malacma@gmail.com&whats_lead=5548996004929&info_event=teste&first_name=moretto&last_name=Morettovixz&address=majorcosta&zip=88020100&city=floripa&state=sc&country=br&invited_event=100&type_event=3&duration_event=3&date_event=11-11-2018" -X POST http://www.totemdefotos.com.br/wp-content/micro_service_totem/index.php
+ * 
+ *  */
 
 $pipedrive = new Pipedrive('e0566462c9ed9ecfa06c633fccf1871eba3670b6');
 //var_dump($pipedrive);
@@ -51,3 +64,8 @@ $mailContent = ((int) $_POST['invited_event']) > 300 ? $emailContent2 : $emailCo
 mailTotem($to, $_POST['first_name'], $subject, $mailContent);
 //mail($to, $subject, $mailContent, $headers);
 ?>
+{
+ "messages": [
+   {"text": "Nosso muito obrigado!"}
+ ]
+}

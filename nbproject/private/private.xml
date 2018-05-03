@@ -4,9 +4,7 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/micro_service_totem/template_default.php</file>
-            <file>file:/C:/xampp/htdocs/micro_service_totem/vendor/phpmailer/phpmailer/src/SMTP.php</file>
             <file>file:/C:/xampp/htdocs/micro_service_totem/test_mail.php</file>
-            <file>file:/C:/xampp/htdocs/micro_service_totem/vendor/autoload.php</file>
             <file>file:/C:/xampp/htdocs/micro_service_totem/index.php</file>
         </group>
     </open-files>
